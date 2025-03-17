@@ -86,7 +86,7 @@ exports.delete = async (req, res, next) => {
   }
 };
 
-exports.deleteAll = async (req, res, next) => {
+exports.deleteALL = async (req, res, next) => {
   try {
     const contactService = new ContactService(MongoDB.client);
     const deletedCount = await contactService.deleteAll();
@@ -100,7 +100,7 @@ exports.deleteAll = async (req, res, next) => {
   }
 };
 
-exports.findAllFavorite = async (req, res, next) => {
+exports.findALLFavorite = async (req, res, next) => {
   try {
     const contactService = new ContactService(MongoDB.client);
     const documents = await contactService.findFavorite();
